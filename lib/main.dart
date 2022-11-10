@@ -1,7 +1,9 @@
 import 'dart:io';
+import 'package:custom_camera_app/datamodel/image_provider.dart';
 import 'package:custom_camera_app/screen/gallery_screen.dart';
 import 'package:flutter/material.dart';
-import 'screen/cameraScreen.dart';
+import 'package:provider/provider.dart';
+// import 'screen/cameraScreen.dart';
 import 'package:camera/camera.dart';
 
 Future<void> main() async {
@@ -22,13 +24,16 @@ class MyApp extends StatelessWidget {
   MyApp({this.image, super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme:
-          ThemeData(primarySwatch: Colors.blue, backgroundColor: Colors.black),
-      // home: GalleryScreen(image: image!),
-      home: CameraScreen(),
+    return ChangeNotifierProvider(
+      create: (context) => imageProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            primarySwatch: Colors.blue, backgroundColor: Colors.black),
+        // home: GalleryScreen(image: image!),
+        home: GalleryScreen(),
+      ),
     );
   }
 }

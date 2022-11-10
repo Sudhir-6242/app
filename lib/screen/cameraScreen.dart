@@ -179,7 +179,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 child: Icon(
                                   Icons.circle_outlined,
                                   size: 60,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                 )),
                             InkWell(
                               onTap: () {

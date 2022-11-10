@@ -36,6 +36,9 @@ dependencies:
   path_provider: ^2.0.11
   sensors_plus: ^2.0.1
   path: ^1.8.2
+  provider: ^6.0.4
+  intl: ^0.17.0
+  sqflite: ^2.2.0+3
   
 
 
