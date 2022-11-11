@@ -17,7 +17,6 @@ class GalleryScreen extends StatefulWidget {
 class _GalleryScreenState extends State<GalleryScreen> {
   @override
   Widget build(BuildContext context) {
-    // final provider = Provider.of(context, listen: false);
     return Scaffold(
         appBar: AppBar(
           title: Text('ReCam'),
