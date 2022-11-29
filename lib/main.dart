@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:custom_camera_app/datamodel/image_provider.dart';
+import 'package:custom_camera_app/screen/cameraScreen.dart';
 import 'package:custom_camera_app/screen/gallery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue, backgroundColor: Colors.black),
         // home: GalleryScreen(image: image!),
-        home: GalleryScreen(),
+        home: CameraScreen(),
       ),
     );
   }
